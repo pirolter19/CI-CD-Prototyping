@@ -1,0 +1,93 @@
+\hypertarget{classSerialReader}{}\doxysection{Serial\+Reader Class Reference}
+\label{classSerialReader}\index{SerialReader@{SerialReader}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSerialReader_a2fe1cf42b5c98cd98916ec432423ec7b}{Serial\+Reader}} (uint8\+\_\+t rx\+Pin, uint8\+\_\+t tx\+Pin, long baud\+Rate)
+\begin{DoxyCompactList}\small\item\em initializes a new serial connection for the given baudrate, rx\+Pin and tx\+Pin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSerialReader_a10a481aa9b4efc73e641e74bc4ef0d71}{read}} (char $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em reads data from \+\_\+my\+Serial and writes it into the given buffer \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{classSerialReader_af054e2ebe6a69113866e469a4fdd1181}{read}} (char prefix)
+\begin{DoxyCompactList}\small\item\em waits for the given prefix (c\+: e.\+g. d\+: for distance) and stores all data after prefix until \textquotesingle{}~\newline
+\textquotesingle{}, max buffer size or timeout is reached. \end{DoxyCompactList}\item 
+array$<$ char, S\+E\+R\+I\+A\+L\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE $>$ \mbox{\hyperlink{classSerialReader_acce33bcec299472e4f43a32428c7bc4f}{read\+Prefix}} (char prefix)
+\begin{DoxyCompactList}\small\item\em waits for the given prefix (c\+: e.\+g. d\+: for distance) and stores all data after prefix until \textquotesingle{}~\newline
+\textquotesingle{}, max buffer size or timeout is reached. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSerialReader_a2fe1cf42b5c98cd98916ec432423ec7b}\label{classSerialReader_a2fe1cf42b5c98cd98916ec432423ec7b}} 
+\index{SerialReader@{SerialReader}!SerialReader@{SerialReader}}
+\index{SerialReader@{SerialReader}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{SerialReader()}{SerialReader()}}
+{\footnotesize\ttfamily Serial\+Reader\+::\+Serial\+Reader (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rx\+Pin,  }\item[{uint8\+\_\+t}]{tx\+Pin,  }\item[{long}]{baud\+Rate }\end{DoxyParamCaption})}
+
+
+
+initializes a new serial connection for the given baudrate, rx\+Pin and tx\+Pin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rx\+Pin} & pin for receiving data \\
+\hline
+{\em tx\+Pin} & pin for transmitting data \\
+\hline
+{\em baud\+Rate} & baudrate for the connection \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSerialReader_a10a481aa9b4efc73e641e74bc4ef0d71}\label{classSerialReader_a10a481aa9b4efc73e641e74bc4ef0d71}} 
+\index{SerialReader@{SerialReader}!read@{read}}
+\index{read@{read}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Serial\+Reader\+::read (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+reads data from \+\_\+my\+Serial and writes it into the given buffer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & buffer to store read data from serial \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSerialReader_af054e2ebe6a69113866e469a4fdd1181}\label{classSerialReader_af054e2ebe6a69113866e469a4fdd1181}} 
+\index{SerialReader@{SerialReader}!read@{read}}
+\index{read@{read}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char $\ast$ Serial\+Reader\+::read (\begin{DoxyParamCaption}\item[{char}]{prefix }\end{DoxyParamCaption})}
+
+
+
+waits for the given prefix (c\+: e.\+g. d\+: for distance) and stores all data after prefix until \textquotesingle{}~\newline
+\textquotesingle{}, max buffer size or timeout is reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & prefix to wait for, before storing data in buffer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSerialReader_acce33bcec299472e4f43a32428c7bc4f}\label{classSerialReader_acce33bcec299472e4f43a32428c7bc4f}} 
+\index{SerialReader@{SerialReader}!readPrefix@{readPrefix}}
+\index{readPrefix@{readPrefix}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{readPrefix()}{readPrefix()}}
+{\footnotesize\ttfamily array$<$ char, S\+E\+R\+I\+A\+L\+\_\+\+R\+E\+A\+D\+E\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE $>$ Serial\+Reader\+::read\+Prefix (\begin{DoxyParamCaption}\item[{char}]{prefix }\end{DoxyParamCaption})}
+
+
+
+waits for the given prefix (c\+: e.\+g. d\+: for distance) and stores all data after prefix until \textquotesingle{}~\newline
+\textquotesingle{}, max buffer size or timeout is reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prefix} & prefix to wait for, before storing data in buffer \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+serial/Serial\+Reader.\+h\item 
+serial/Serial\+Reader.\+cpp\end{DoxyCompactItemize}

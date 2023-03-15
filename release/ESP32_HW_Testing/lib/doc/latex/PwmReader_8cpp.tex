@@ -1,0 +1,196 @@
+\hypertarget{PwmReader_8cpp}{}\doxysection{pwm/\+Pwm\+Reader.cpp File Reference}
+\label{PwmReader_8cpp}\index{pwm/PwmReader.cpp@{pwm/PwmReader.cpp}}
+{\ttfamily \#include \char`\"{}Pwm\+Reader.\+h\char`\"{}}\newline
+Include dependency graph for Pwm\+Reader.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PwmReader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a307406a13bfaae8f91e1d40cbe4258af}\label{PwmReader_8cpp_a307406a13bfaae8f91e1d40cbe4258af}} 
+void \mbox{\hyperlink{PwmReader_8cpp_a307406a13bfaae8f91e1d40cbe4258af}{init\+Pwm\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em initialize pwm reader for all pins declared in pwm\+Pins\mbox{[}\mbox{]} (main.\+cpp) iterate over all pins, set them as input, and attach I\+SR \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a80a87652d76b266bdac0fa8e2ef025f5}\label{PwmReader_8cpp_a80a87652d76b266bdac0fa8e2ef025f5}} 
+void \mbox{\hyperlink{PwmReader_8cpp_a80a87652d76b266bdac0fa8e2ef025f5}{setup\+Pwm\+Rising\+Interrupt}} (uint8\+\_\+t pin, uint8\+\_\+t pin\+Index)
+\begin{DoxyCompactList}\small\item\em attach edge rising I\+SR to given pin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a39f8bf45eb3502b2a7ab4c0627f2a0be}\label{PwmReader_8cpp_a39f8bf45eb3502b2a7ab4c0627f2a0be}} 
+void {\bfseries setup\+Pwm\+Changing\+Interrupt} (uint8\+\_\+t pin, uint8\+\_\+t pin\+Index)
+\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a763de06377449288bf6c967ffa7e293f}\label{PwmReader_8cpp_a763de06377449288bf6c967ffa7e293f}} 
+void \mbox{\hyperlink{PwmReader_8cpp_a763de06377449288bf6c967ffa7e293f}{pwm\+Change\+Analyze}} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em analyze pwm data after interrupt (channels mapped to pwm\+Pins\mbox{[}\mbox{]}) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a2022b33445aeb4613d7f67eb0dae2379}\label{PwmReader_8cpp_a2022b33445aeb4613d7f67eb0dae2379}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_a2022b33445aeb4613d7f67eb0dae2379}{pwm\+Change\+Channel1\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called every edge change of channel 1 = pwm\+Pins\href{IRAM_ATTR -> use for ISR, if operations involve flash read/write.}{\texttt{ 0}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_aa95dde809aaaa1f05235c2e6527837a9}\label{PwmReader_8cpp_aa95dde809aaaa1f05235c2e6527837a9}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_aa95dde809aaaa1f05235c2e6527837a9}{pwm\+Change\+Channel2\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called every edge change of channel 2 = pwm\+Pins\href{IRAM_ATTR -> use for ISR, if operations involve flash read/write.}{\texttt{ 1}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a1fdcf5106e09dc5711f1530257425aad}\label{PwmReader_8cpp_a1fdcf5106e09dc5711f1530257425aad}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_a1fdcf5106e09dc5711f1530257425aad}{pwm\+Change\+Channel3\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called every edge change of channel 3 = pwm\+Pins\href{IRAM_ATTR -> use for ISR, if operations involve flash read/write.}{\texttt{ 2}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a3d94d3cb3a4af953d8fba91b6057ad66}\label{PwmReader_8cpp_a3d94d3cb3a4af953d8fba91b6057ad66}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_a3d94d3cb3a4af953d8fba91b6057ad66}{pwm\+Change\+Channel4\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called every edge change of channel 4 = pwm\+Pins\href{IRAM_ATTR -> use for ISR, if operations involve flash read/write.}{\texttt{ 3}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_af0485b8e3c9702e1ccaf2bc4731f3f0d}\label{PwmReader_8cpp_af0485b8e3c9702e1ccaf2bc4731f3f0d}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_af0485b8e3c9702e1ccaf2bc4731f3f0d}{pwm\+Rising\+Channel1\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called at the rising edge of channel 1 to detect the start of the transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a4e2049049c30ce8f6d010baf8f5229f8}\label{PwmReader_8cpp_a4e2049049c30ce8f6d010baf8f5229f8}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_a4e2049049c30ce8f6d010baf8f5229f8}{pwm\+Rising\+Channel2\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called at the rising edge of channel 2 to detect the start of the transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a6c9373abb3f03e3548cccc55ea7c50bc}\label{PwmReader_8cpp_a6c9373abb3f03e3548cccc55ea7c50bc}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_a6c9373abb3f03e3548cccc55ea7c50bc}{pwm\+Rising\+Channel3\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called at the rising edge of channel 3 to detect the start of the transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_abec0a0e9f8ce89b7a9b7f0e77644bda5}\label{PwmReader_8cpp_abec0a0e9f8ce89b7a9b7f0e77644bda5}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR \mbox{\hyperlink{PwmReader_8cpp_abec0a0e9f8ce89b7a9b7f0e77644bda5}{pwm\+Rising\+Channel4\+I\+SR}} ()
+\begin{DoxyCompactList}\small\item\em I\+SR which will be called at the rising edge of channel 4 to detect the start of the transaction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{PwmReader_8cpp_abd855070675a565ae5d1b9951833e4a2}{read\+Pwm\+Data}} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em read data of the channel and save values \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{PwmReader_8cpp_acc23a796b920d07feeed4edba2dcd32a}{get\+Pwm\+Pulse\+Start\+Time}} ()
+\begin{DoxyCompactList}\small\item\em returns the time at the start of pulse \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{PwmReader_8cpp_a5076616eac98db69f22b8405f0326808}{get\+Pwm\+Period\+Time}} ()
+\begin{DoxyCompactList}\small\item\em returns the time between pulses \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_af87f324ff781b7c46b06867524149603}\label{PwmReader_8cpp_af87f324ff781b7c46b06867524149603}} 
+float {\bfseries get\+Pulse\+Width\+High} ()
+\item 
+float \mbox{\hyperlink{PwmReader_8cpp_a4ae98682cbb65969b9c076ef1234c3d8}{get\+Pulse\+Width\+Low}} ()
+\begin{DoxyCompactList}\small\item\em returns the pulse width \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{PwmReader_8cpp_a73038c13e854e4850489356b8b5e98aa}{get\+Pwm\+Frequency}} ()
+\begin{DoxyCompactList}\small\item\em returns the pwm frequency in Hz \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{PwmReader_8cpp_ae8011fe33d175f8e7160e527ac1d4100}{get\+Pwm\+Duty\+Cycle}} ()
+\begin{DoxyCompactList}\small\item\em returns the pmw duty cycle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a2e28e4eb9eb9fa1479caf08bb859081d}\label{PwmReader_8cpp_a2e28e4eb9eb9fa1479caf08bb859081d}} 
+volatile int \mbox{\hyperlink{PwmReader_8cpp_a2e28e4eb9eb9fa1479caf08bb859081d}{pwm\+Measurements}} \mbox{[}number\+Of\+Pins\mbox{]}
+\begin{DoxyCompactList}\small\item\em an array to store pulsewidth measurements \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a0effd5a5067f74ffce1a2a92173c9d96}\label{PwmReader_8cpp_a0effd5a5067f74ffce1a2a92173c9d96}} 
+volatile uint64\+\_\+t \mbox{\hyperlink{PwmReader_8cpp_a0effd5a5067f74ffce1a2a92173c9d96}{change\+Interrupt\+Time}}
+\begin{DoxyCompactList}\small\item\em the time of the current pin change interrupt \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_af8e8a27b5b8d97ff5e401889fa2d1ecb}\label{PwmReader_8cpp_af8e8a27b5b8d97ff5e401889fa2d1ecb}} 
+volatile uint64\+\_\+t \mbox{\hyperlink{PwmReader_8cpp_af8e8a27b5b8d97ff5e401889fa2d1ecb}{pwm\+Pulse\+Start\+Times}} \mbox{[}number\+Of\+Pins\mbox{]}
+\begin{DoxyCompactList}\small\item\em an array to store the start time of each get\+Pulse\+Width\+Low pulse \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_afa3fb12b21bf6c079b2229f9025a7450}\label{PwmReader_8cpp_afa3fb12b21bf6c079b2229f9025a7450}} 
+volatile bool \mbox{\hyperlink{PwmReader_8cpp_afa3fb12b21bf6c079b2229f9025a7450}{pwm\+New\+Data\+Flag}} \mbox{[}number\+Of\+Pins\mbox{]}
+\begin{DoxyCompactList}\small\item\em flag whenever new data is available on each pin \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a21165f8c92bd100f0641b998dccc1020}\label{PwmReader_8cpp_a21165f8c92bd100f0641b998dccc1020}} 
+volatile uint64\+\_\+t \mbox{\hyperlink{PwmReader_8cpp_a21165f8c92bd100f0641b998dccc1020}{pwm\+Periods}} \mbox{[}number\+Of\+Pins\mbox{]}
+\begin{DoxyCompactList}\small\item\em period, mirco sec, between two pulses on each pin \end{DoxyCompactList}\item 
+volatile bool prev\+Pin\+State\mbox{[}number\+Of\+Pins\mbox{]} volatile bool \mbox{\hyperlink{PwmReader_8cpp_a1c70c93deacb0581445e01ab7e13c3c4}{pwm\+Channel\+Ready\+To\+Read}} \mbox{[}number\+Of\+Pins\mbox{]}
+\begin{DoxyCompactList}\small\item\em an array used to determine whether a pin has gone low-\/high or high-\/low \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a1fdc2bf5595c2e64dc06d987769834eb}\label{PwmReader_8cpp_a1fdc2bf5595c2e64dc06d987769834eb}} 
+bool {\bfseries is\+Initialized} = false
+\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a3782f4ee457657ddf63e9e749d962313}\label{PwmReader_8cpp_a3782f4ee457657ddf63e9e749d962313}} 
+uint64\+\_\+t {\bfseries pwm\+Pulse\+Start\+Time}
+\item 
+\mbox{\Hypertarget{PwmReader_8cpp_a38f8346f3a974a9985666984b8a63a24}\label{PwmReader_8cpp_a38f8346f3a974a9985666984b8a63a24}} 
+float {\bfseries pwm\+Pulse\+Width\+High}
+\item 
+\mbox{\Hypertarget{PwmReader_8cpp_af3a47b2d2cfde5f5b68e50a8708e01aa}\label{PwmReader_8cpp_af3a47b2d2cfde5f5b68e50a8708e01aa}} 
+float {\bfseries pwm\+Period\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{PwmReader_8cpp_a4ae98682cbb65969b9c076ef1234c3d8}\label{PwmReader_8cpp_a4ae98682cbb65969b9c076ef1234c3d8}} 
+\index{PwmReader.cpp@{PwmReader.cpp}!getPulseWidthLow@{getPulseWidthLow}}
+\index{getPulseWidthLow@{getPulseWidthLow}!PwmReader.cpp@{PwmReader.cpp}}
+\doxysubsubsection{\texorpdfstring{getPulseWidthLow()}{getPulseWidthLow()}}
+{\footnotesize\ttfamily float get\+Pulse\+Width\+Low (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the pulse width 
+
+\begin{DoxyReturn}{Returns}
+the pulse width 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PwmReader_8cpp_ae8011fe33d175f8e7160e527ac1d4100}\label{PwmReader_8cpp_ae8011fe33d175f8e7160e527ac1d4100}} 
+\index{PwmReader.cpp@{PwmReader.cpp}!getPwmDutyCycle@{getPwmDutyCycle}}
+\index{getPwmDutyCycle@{getPwmDutyCycle}!PwmReader.cpp@{PwmReader.cpp}}
+\doxysubsubsection{\texorpdfstring{getPwmDutyCycle()}{getPwmDutyCycle()}}
+{\footnotesize\ttfamily float get\+Pwm\+Duty\+Cycle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the pmw duty cycle 
+
+\begin{DoxyReturn}{Returns}
+the pmw duty cycle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PwmReader_8cpp_a73038c13e854e4850489356b8b5e98aa}\label{PwmReader_8cpp_a73038c13e854e4850489356b8b5e98aa}} 
+\index{PwmReader.cpp@{PwmReader.cpp}!getPwmFrequency@{getPwmFrequency}}
+\index{getPwmFrequency@{getPwmFrequency}!PwmReader.cpp@{PwmReader.cpp}}
+\doxysubsubsection{\texorpdfstring{getPwmFrequency()}{getPwmFrequency()}}
+{\footnotesize\ttfamily float get\+Pwm\+Frequency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the pwm frequency in Hz 
+
+\begin{DoxyReturn}{Returns}
+the pwm frequency in Hz 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PwmReader_8cpp_a5076616eac98db69f22b8405f0326808}\label{PwmReader_8cpp_a5076616eac98db69f22b8405f0326808}} 
+\index{PwmReader.cpp@{PwmReader.cpp}!getPwmPeriodTime@{getPwmPeriodTime}}
+\index{getPwmPeriodTime@{getPwmPeriodTime}!PwmReader.cpp@{PwmReader.cpp}}
+\doxysubsubsection{\texorpdfstring{getPwmPeriodTime()}{getPwmPeriodTime()}}
+{\footnotesize\ttfamily float get\+Pwm\+Period\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the time between pulses 
+
+\begin{DoxyReturn}{Returns}
+the time between pulses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PwmReader_8cpp_acc23a796b920d07feeed4edba2dcd32a}\label{PwmReader_8cpp_acc23a796b920d07feeed4edba2dcd32a}} 
+\index{PwmReader.cpp@{PwmReader.cpp}!getPwmPulseStartTime@{getPwmPulseStartTime}}
+\index{getPwmPulseStartTime@{getPwmPulseStartTime}!PwmReader.cpp@{PwmReader.cpp}}
+\doxysubsubsection{\texorpdfstring{getPwmPulseStartTime()}{getPwmPulseStartTime()}}
+{\footnotesize\ttfamily uint64\+\_\+t get\+Pwm\+Pulse\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the time at the start of pulse 
+
+\begin{DoxyReturn}{Returns}
+the time at the start of pulse 
+\end{DoxyReturn}
+\mbox{\Hypertarget{PwmReader_8cpp_abd855070675a565ae5d1b9951833e4a2}\label{PwmReader_8cpp_abd855070675a565ae5d1b9951833e4a2}} 
+\index{PwmReader.cpp@{PwmReader.cpp}!readPwmData@{readPwmData}}
+\index{readPwmData@{readPwmData}!PwmReader.cpp@{PwmReader.cpp}}
+\doxysubsubsection{\texorpdfstring{readPwmData()}{readPwmData()}}
+{\footnotesize\ttfamily bool read\+Pwm\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+read data of the channel and save values 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if new data is available, false if no data available (error will be logged) 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{PwmReader_8cpp_a1c70c93deacb0581445e01ab7e13c3c4}\label{PwmReader_8cpp_a1c70c93deacb0581445e01ab7e13c3c4}} 
+\index{PwmReader.cpp@{PwmReader.cpp}!pwmChannelReadyToRead@{pwmChannelReadyToRead}}
+\index{pwmChannelReadyToRead@{pwmChannelReadyToRead}!PwmReader.cpp@{PwmReader.cpp}}
+\doxysubsubsection{\texorpdfstring{pwmChannelReadyToRead}{pwmChannelReadyToRead}}
+{\footnotesize\ttfamily volatile bool prev\+Pin\+State \mbox{[}number\+Of\+Pins\mbox{]} volatile bool pwm\+Channel\+Ready\+To\+Read\mbox{[}number\+Of\+Pins\mbox{]}}
+
+
+
+an array used to determine whether a pin has gone low-\/high or high-\/low 
+
+determines if rising edge of channel the channel was detected -\/$>$ start 

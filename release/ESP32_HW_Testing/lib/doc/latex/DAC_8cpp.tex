@@ -1,0 +1,59 @@
+\hypertarget{DAC_8cpp}{}\doxysection{sensors/\+D\+A\+C/\+D\+AC.cpp File Reference}
+\label{DAC_8cpp}\index{sensors/DAC/DAC.cpp@{sensors/DAC/DAC.cpp}}
+{\ttfamily \#include \char`\"{}D\+A\+C.\+h\char`\"{}}\newline
+Include dependency graph for D\+A\+C.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{DAC_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{DAC_8cpp_aa1b118cf7608cdd6893827e90eb4c427}{dac\+\_\+setup}} (uint8\+\_\+t analog\+\_\+value\+\_\+pin\+\_\+out)
+\begin{DoxyCompactList}\small\item\em This functions sets the output where the dac value should be applied to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{DAC_8cpp_a3018efae10ce8dd3ab66fa7d23c8575c}{dac\+\_\+write}} (float voltage, float reference\+\_\+voltage)
+\begin{DoxyCompactList}\small\item\em This function applies the wished voltage to the output pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{DAC_8cpp_a97b6d588814f7b3aa278c4a7b83a4f51}\label{DAC_8cpp_a97b6d588814f7b3aa278c4a7b83a4f51}} 
+uint8\+\_\+t {\bfseries analog\+\_\+value\+\_\+pin}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{DAC_8cpp_aa1b118cf7608cdd6893827e90eb4c427}\label{DAC_8cpp_aa1b118cf7608cdd6893827e90eb4c427}} 
+\index{DAC.cpp@{DAC.cpp}!dac\_setup@{dac\_setup}}
+\index{dac\_setup@{dac\_setup}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{dac\_setup()}{dac\_setup()}}
+{\footnotesize\ttfamily void dac\+\_\+setup (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{analog\+\_\+value\+\_\+pin\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+This functions sets the output where the dac value should be applied to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em analog\+\_\+value\+\_\+pin\+\_\+out} & Provide the pin number where the analog value should be written to. Make sure this pin has an A\+DC available. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{DAC_8cpp_a3018efae10ce8dd3ab66fa7d23c8575c}\label{DAC_8cpp_a3018efae10ce8dd3ab66fa7d23c8575c}} 
+\index{DAC.cpp@{DAC.cpp}!dac\_write@{dac\_write}}
+\index{dac\_write@{dac\_write}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{dac\_write()}{dac\_write()}}
+{\footnotesize\ttfamily void dac\+\_\+write (\begin{DoxyParamCaption}\item[{float}]{voltage,  }\item[{float}]{reference\+\_\+voltage }\end{DoxyParamCaption})}
+
+
+
+This function applies the wished voltage to the output pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em voltage} & Wished output voltage \\
+\hline
+{\em reference\+\_\+voltage} & Reference voltage of the A\+D\+Cs \\
+\hline
+\end{DoxyParams}

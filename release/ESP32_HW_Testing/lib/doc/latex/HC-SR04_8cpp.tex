@@ -1,0 +1,71 @@
+\hypertarget{HC-SR04_8cpp}{}\doxysection{sensors/\+H\+C-\/\+S\+R04/\+H\+C-\/\+S\+R04.cpp File Reference}
+\label{HC-SR04_8cpp}\index{sensors/HC-\/SR04/HC-\/SR04.cpp@{sensors/HC-\/SR04/HC-\/SR04.cpp}}
+{\ttfamily \#include \char`\"{}H\+C-\/\+S\+R04.\+h\char`\"{}}\newline
+Include dependency graph for H\+C-\/\+S\+R04.cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{HC-SR04_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{HC-SR04_8cpp_ad962f9b412b8a269952a4a2cd9b288f8}\label{HC-SR04_8cpp_ad962f9b412b8a269952a4a2cd9b288f8}} 
+void I\+R\+A\+M\+\_\+\+A\+T\+TR {\bfseries handle\+Interrupt} (void)
+\item 
+void \mbox{\hyperlink{HC-SR04_8cpp_ae1c0b68b7cf252b47b7f955d6ec23725}{hc\+\_\+sr04\+\_\+setup}} (char usonic\+\_\+echo\+\_\+pin\+\_\+out, char usonic\+\_\+trigger\+\_\+pin\+\_\+in)
+\begin{DoxyCompactList}\small\item\em This functions sets the output and inputs needed for emulating the ultrasonic H\+C-\/\+S\+R04 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{HC-SR04_8cpp_ac9f56c9fa52e57f9e1c9bb649791792a}{hc\+\_\+sr04\+\_\+emulate}} (uint16\+\_\+t distance)
+\begin{DoxyCompactList}\small\item\em This functions emulates the signal on the echo pin of the H\+C-\/\+S\+R04 for a certain distance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{HC-SR04_8cpp_a89cf07bcbdcf01c6329013600d954b30}\label{HC-SR04_8cpp_a89cf07bcbdcf01c6329013600d954b30}} 
+uint16\+\_\+t {\bfseries expected\+Distance}
+\item 
+\mbox{\Hypertarget{HC-SR04_8cpp_a31ba1e3f59eef14ec12f502b282e083a}\label{HC-SR04_8cpp_a31ba1e3f59eef14ec12f502b282e083a}} 
+uint8\+\_\+t {\bfseries usonic\+\_\+echo}
+\item 
+\mbox{\Hypertarget{HC-SR04_8cpp_a899d0f95995a6391126307cc0a6fa4d0}\label{HC-SR04_8cpp_a899d0f95995a6391126307cc0a6fa4d0}} 
+uint8\+\_\+t {\bfseries usonic\+\_\+trigger}
+\item 
+\mbox{\Hypertarget{HC-SR04_8cpp_a431d94ce1830dfe33ed017379b38d656}\label{HC-SR04_8cpp_a431d94ce1830dfe33ed017379b38d656}} 
+bool {\bfseries wait\+\_\+isr}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{HC-SR04_8cpp_ac9f56c9fa52e57f9e1c9bb649791792a}\label{HC-SR04_8cpp_ac9f56c9fa52e57f9e1c9bb649791792a}} 
+\index{HC-\/SR04.cpp@{HC-\/SR04.cpp}!hc\_sr04\_emulate@{hc\_sr04\_emulate}}
+\index{hc\_sr04\_emulate@{hc\_sr04\_emulate}!HC-\/SR04.cpp@{HC-\/SR04.cpp}}
+\doxysubsubsection{\texorpdfstring{hc\_sr04\_emulate()}{hc\_sr04\_emulate()}}
+{\footnotesize\ttfamily void hc\+\_\+sr04\+\_\+emulate (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{distance }\end{DoxyParamCaption})}
+
+
+
+This functions emulates the signal on the echo pin of the H\+C-\/\+S\+R04 for a certain distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & Provide the distance value you want to emulate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{HC-SR04_8cpp_ae1c0b68b7cf252b47b7f955d6ec23725}\label{HC-SR04_8cpp_ae1c0b68b7cf252b47b7f955d6ec23725}} 
+\index{HC-\/SR04.cpp@{HC-\/SR04.cpp}!hc\_sr04\_setup@{hc\_sr04\_setup}}
+\index{hc\_sr04\_setup@{hc\_sr04\_setup}!HC-\/SR04.cpp@{HC-\/SR04.cpp}}
+\doxysubsubsection{\texorpdfstring{hc\_sr04\_setup()}{hc\_sr04\_setup()}}
+{\footnotesize\ttfamily void hc\+\_\+sr04\+\_\+setup (\begin{DoxyParamCaption}\item[{char}]{usonic\+\_\+echo\+\_\+pin\+\_\+out,  }\item[{char}]{usonic\+\_\+trigger\+\_\+pin\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+This functions sets the output and inputs needed for emulating the ultrasonic H\+C-\/\+S\+R04 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usonic\+\_\+echo\+\_\+pin\+\_\+out} & Provide the pin number this signal is connected to the E\+SP \\
+\hline
+{\em usonic\+\_\+trigger\+\_\+pin\+\_\+in} & Provide the pin number this signal is connected to the E\+SP \\
+\hline
+\end{DoxyParams}

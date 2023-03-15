@@ -1,0 +1,57 @@
+\hypertarget{classTimeoutHandler}{}\doxysection{Timeout\+Handler Class Reference}
+\label{classTimeoutHandler}\index{TimeoutHandler@{TimeoutHandler}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTimeoutHandler_a9140267b318d95b512cc73714694b603}{Timeout\+Handler}} (uint64\+\_\+t timeout\+Ms, bool write\+Error=true)
+\begin{DoxyCompactList}\small\item\em create handler for timeout functionality \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimeoutHandler_a7bce28893ea713fb138dc34b9ac9fb77}\label{classTimeoutHandler_a7bce28893ea713fb138dc34b9ac9fb77}} 
+void \mbox{\hyperlink{classTimeoutHandler_a7bce28893ea713fb138dc34b9ac9fb77}{start}} ()
+\begin{DoxyCompactList}\small\item\em start the timer for timeout calculation \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTimeoutHandler_a33f535ce033c07c5ba52811315c0407f}{has\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em check if timeout was reached \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimeoutHandler_a09868835c55398ac3983c17df3b5085b}\label{classTimeoutHandler_a09868835c55398ac3983c17df3b5085b}} 
+void \mbox{\hyperlink{classTimeoutHandler_a09868835c55398ac3983c17df3b5085b}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset starttime and endtime, timeout in ms stays the same as defined in ctor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTimeoutHandler_a9140267b318d95b512cc73714694b603}\label{classTimeoutHandler_a9140267b318d95b512cc73714694b603}} 
+\index{TimeoutHandler@{TimeoutHandler}!TimeoutHandler@{TimeoutHandler}}
+\index{TimeoutHandler@{TimeoutHandler}!TimeoutHandler@{TimeoutHandler}}
+\doxysubsubsection{\texorpdfstring{TimeoutHandler()}{TimeoutHandler()}}
+{\footnotesize\ttfamily Timeout\+Handler\+::\+Timeout\+Handler (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{timeout\+Ms,  }\item[{bool}]{write\+Error = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+create handler for timeout functionality 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout\+Ms} & time in ms after which the timeout is reached \\
+\hline
+{\em write\+Error} & if true, error will be logged when timeout is reached (default = true) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTimeoutHandler_a33f535ce033c07c5ba52811315c0407f}\label{classTimeoutHandler_a33f535ce033c07c5ba52811315c0407f}} 
+\index{TimeoutHandler@{TimeoutHandler}!hasTimeout@{hasTimeout}}
+\index{hasTimeout@{hasTimeout}!TimeoutHandler@{TimeoutHandler}}
+\doxysubsubsection{\texorpdfstring{hasTimeout()}{hasTimeout()}}
+{\footnotesize\ttfamily bool Timeout\+Handler\+::has\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check if timeout was reached 
+
+\begin{DoxyReturn}{Returns}
+true if timeout was reached, false if timeout not reached yet 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+utils/timeout\+\_\+handler.\+h\item 
+utils/timeout\+\_\+handler.\+cpp\end{DoxyCompactItemize}
