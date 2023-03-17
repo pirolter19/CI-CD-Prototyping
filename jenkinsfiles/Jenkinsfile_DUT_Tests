@@ -1,0 +1,46 @@
+pipeline 
+{
+    agent any 
+    options
+    {
+       ansiColor('xterm')
+    }
+
+    stages 
+    {
+        stage('build, upload and test DUT') 
+        {
+            steps 
+            {
+                script
+                {
+                    dir("release/UNO_DUT_Car/") 
+                    {
+                        echo 'Test stage: run the test cases on uno'
+                        sh 'pio test --test-port /dev/ttyACM0 -f embedded/* -v'
+                    }
+                }
+            }
+        }
+    }
+
+    post
+    {
+        failure
+        {
+            script
+            {
+                echo 'sending failure to feedback device'
+                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.43.160/post?status=0"'
+            }
+        }
+        success
+        {
+            script
+            {
+                echo 'sending success to feedback device'
+                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.43.160/post?status=1"'
+            }
+        }
+    }
+}

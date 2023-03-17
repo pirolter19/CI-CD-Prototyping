@@ -1,0 +1,52 @@
+pipeline 
+{
+    agent any 
+    options
+    {
+       ansiColor('xterm')
+    }
+    
+    stages 
+    {
+        stage('build, upload and test complete setup') 
+        {
+            steps 
+            {
+                script
+                {
+                    dir("release/UNO_DUT_Car/") 
+                    {
+                        echo 'Build stage: compile release folder and upload to uno' 
+                        sh 'pio run -t upload --upload-port /dev/ttyACM0'
+                    }
+
+                    dir("release/ESP32_HW_Testing/") 
+                    {
+                        echo 'Test stage: run the test cases'
+                        sh 'pio test --test-port /dev/ttyUSB0 -f embedded/car/* -f software/* -v'
+                    }
+                }
+            }
+        }
+    }
+
+    post
+    {
+        failure
+        {
+            script
+            {
+                echo 'sending failure to feedback device'
+                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.43.160/post?status=0"'
+            }
+        }
+        success
+        {
+            script
+            {
+                echo 'sending success to feedback device'
+                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.43.160/post?status=1"'
+            }
+        }
+    }
+}
