@@ -24,8 +24,17 @@ pipeline
                     {
                         echo 'Test stage: run the test cases'
                         sh 'pio test --test-port /dev/ttyUSB0 -f embedded/car/actuators/test_dc_motor -vv'
-                        sh 'pio test --test-port /dev/ttyUSB0 -f embedded/car/actuators/test_servo_motor -vv'
+                    }
+                    dir("release/ESP32_HW_Testing/")
+                    {
+                        echo 'Test stage: run the test cases'
+                        sh 'pio test --test-port /dev/ttyUSB0 -f embedded/car/actuators/test_servo_motor -vv'   
+                    }
+                    dir("release/ESP32_HW_Testing/")
+                    {
+                        echo 'Test stage: run the test cases'
                         sh 'pio test --test-port /dev/ttyUSB0 -f embedded/car/sensors/test_HC-SR04 -vv'
+
                     }
                 }
             }
