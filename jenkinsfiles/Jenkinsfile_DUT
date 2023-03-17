@@ -31,7 +31,7 @@ pipeline
             script
             {
                 echo 'sending failure to feedback device'
-                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.43.160/post?status=0"'
+                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.34.200/post?status=0"'
             }
         }
         success
@@ -39,7 +39,7 @@ pipeline
             script
             {
                 echo 'sending success to feedback device'
-                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.43.160/post?status=1"'
+                sh 'curl --connect-timeout 30 --location --request POST "http://192.168.34.200/post?status=1"'
             }
         }
     }
