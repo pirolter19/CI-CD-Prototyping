@@ -23,7 +23,7 @@ pipeline
                     dir("release/ESP32_HW_Testing/") 
                     {
                         echo 'Test stage: run the test cases'
-                        sh 'pio test --test-port /dev/ttyUSB0 -f embedded/car/* -f software/* -v'
+                        sh 'pio test --test-port /dev/ttyUSB0 -f embedded/car/* -f software/* -vvv'
                     }
                 }
             }
