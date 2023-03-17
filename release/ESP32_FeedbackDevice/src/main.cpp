@@ -36,14 +36,26 @@ uint8_t state;
 bool isOn = true;
 
 // globals
-const char *ssid = "Spying_On_Fh";    // ssid of router Spying_On_Fh
-const char *password = "ECE20groupD"; // psw of router ECE20groupD
+const char *ssid = "Not a Hotspot";    // ssid of router Spying_On_Fh
+const char *password = "861ea7fc719f"; // psw of router ECE20groupD
+
+// Set your Static IP address
+IPAddress local_IP(192, 168, 34, 200);
+// Set your Gateway IP address
+IPAddress gateway(192, 168, 34, 136);
+
+IPAddress subnet(255, 255, 255, 0);
 
 void setup()
 {
   // init serial connection
   Serial.begin(115200);
   Serial.println("Initialize System");
+
+  // Configures static IP address
+  if (!WiFi.config(local_IP, gateway, subnet)) {
+    Serial.println("STA Failed to configure");
+  }
 
   // setup and connect wifi
   SetupWifiConnection();
