@@ -19,7 +19,7 @@ volatile bool pwmNewDataFlag[numberOfPins];
 volatile uint64_t pwmPeriods[numberOfPins];
 
 /// @brief an array used to determine whether a pin has gone low-high or high-low
-volatile bool prevPinState[numberOfPins]
+volatile bool prevPinState[numberOfPins];
 
 /// @brief determines if rising edge of channel the channel was detected -> start
 volatile bool pwmChannelReadyToRead[numberOfPins];
