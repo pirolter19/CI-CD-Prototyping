@@ -13,12 +13,12 @@ int getMeanValueOfReadValues(uint8_t samples)
     for (int i = 0; i < samples;)
     {
         auto readValue = serialReader.read(USONIC_DISTANCE_SERIAL_TAG);
-        Log.verboseln("readValue = %s", readValue);
         int value = atoi(readValue);
-
+        
         // if value is not empty
         if (value > 0)
         {
+            Log.traceln("readValue = %s", readValue);
             sum += value;
             i++;
         }
@@ -31,7 +31,7 @@ void test_distance(uint16_t distance, bool expectedRedLed, bool expectedYellowLe
 {
     delay(delay_time);
     expectedDistance = distance;
-    int readDistance = getMeanValueOfReadValues(10);
+    int readDistance = getMeanValueOfReadValues(30);
 
     Log.traceln("distance:\texpected=%d,\t actual=%d", expectedDistance, readDistance);
 
